@@ -17,6 +17,8 @@
     },
     "devDependencies": {
         "@playwright/test": "^1.28.1",
+        "@supabase/ssr": "^0.3.0",
+        "@supabase/supabase-js": "^2.43.4",
         "@sveltejs/adapter-auto": "^3.0.0",
         "@sveltejs/kit": "^2.0.0",
         "@sveltejs/vite-plugin-svelte": "^3.0.0",
