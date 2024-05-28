@@ -43,14 +43,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Svelte Check
-        run: pnpm check
-
       - name: Run lint
         run: pnpm lint
 
+      - name: Setup dummy env
+        run: |
+          echo "PUBLIC_SUPABASE_URL="https://uwu.uwu" >> .env.local
+          echo "PUBLIC_SUPABASE_ANON_KEY="uwu" >> .env.local
+
+      - name: Svelte Check
+        run: pnpm check
+
       - name: Build
         run: pnpm build
-        env:
-          PUBLIC_SUPABASE_URL: "https://uwu.uwu/"
-          PUBLIC_SUPABASE_ANON_KEY: "uwu"
