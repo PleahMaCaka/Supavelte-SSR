@@ -9,8 +9,7 @@ export const GET: RequestHandler = async ({ url, locals: { supabase } }) => {
 
     /**
      * Clean up the redirect URL by deleting the Auth flow parameters.
-     *
-     * `next` is preserved for now, because it"s needed in the error case.
+     * `next` is preserved for now, because it's needed in the error case.
      */
     const redirectTo = new URL(url)
     redirectTo.pathname = next

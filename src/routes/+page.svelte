@@ -10,8 +10,8 @@
         <a class="btn btn-primary w-full" href="/auth">
             Authenticate
         </a>
-        <a class="btn btn-outline w-full" href="/private">
-            Private
+        <a class="btn btn-outline w-full" href="/app">
+            Go to App
         </a>
     </div>
     <ul>
