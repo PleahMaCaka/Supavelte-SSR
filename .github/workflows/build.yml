@@ -47,9 +47,7 @@ jobs:
         run: pnpm lint
 
       - name: Setup dummy env
-        run: |
-          echo 'PUBLIC_SUPABASE_URL="https://uwu.uwu"' >> .env.local
-          echo 'PUBLIC_SUPABASE_ANON_KEY="uwu"' >> .env.local
+        run: cp .env.example .env.local
 
       - name: Svelte Check
         run: pnpm check
