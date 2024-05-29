@@ -1,3 +1,7 @@
+<script lang="ts">
+    let isLogin = true
+</script>
+
 <div class="size-full flex flex-col justify-center items-center gap-8">
     <form action="?/login" class="flex flex-col gap-2 bg-base-300 rounded-box px-10 py-8 shadow-2xl"
           method="POST"
@@ -27,8 +31,12 @@
             />
         </label>
         <div class="divider my-0"></div>
-        <button class="btn btn-primary text-white" formaction="?/signup">
-            Continue
+        <button class="btn btn-primary text-white" formaction={isLogin ? "?/login" : "?/signup"}>
+            {isLogin ? "Login" : "Sign Up"}
+        </button>
+        <button on:click|preventDefault={() => isLogin = !isLogin}>
+            {isLogin ? "Don't have an account?" : "Already have an account?"}
+            {isLogin ? "Sign Up" : "Login"}
         </button>
     </form>
 </div>
